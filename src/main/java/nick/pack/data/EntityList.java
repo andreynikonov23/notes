@@ -9,11 +9,12 @@ import nick.pack.models.User;
 public class EntityList {
 	public static final List<User> userList = new ArrayList<>();
 	public static final List<Note> noteList = new ArrayList<>();
+	
 	static {
 		DAO<User> userDAO = new UserDataBase();
 		System.out.println("Hello World");
-		userList.addAll(userDAO.selectAll());
+		EntityList.userList.addAll(userDAO.selectAll());
 		DAO<Note> noteDAO = new NoteDataBase();
-		noteList.addAll(noteDAO.selectAll());
+		EntityList.noteList.addAll(noteDAO.selectAll());
 	}
 }

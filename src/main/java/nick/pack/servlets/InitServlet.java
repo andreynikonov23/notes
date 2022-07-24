@@ -9,6 +9,11 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
+import nick.pack.data.DAO;
+import nick.pack.data.EntityList;
+import nick.pack.data.NoteDataBase;
+import nick.pack.data.UserDataBase;
+import nick.pack.models.Note;
 import nick.pack.models.User;
 
 public class InitServlet extends HttpServlet {
@@ -16,12 +21,13 @@ public class InitServlet extends HttpServlet {
 	private static Logger logger = Logger.getLogger(InitServlet.class);
 	
 	
-	public void doGet(HttpServletRequest request, HttpServletResponse response) {
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		logger.debug(": /init - request" + ": " + InitServlet.class + " checked session");
 		HttpSession session = request.getSession();
 		User user = (User) session.getAttribute("user");
 		if (user == null) {
-			//авторизация
-			//задать сессию
+			logger.debug(": session not found, redirect in /signin");
+			response.sendRedirect("/notes/signin");
 		} else {
 			//проверка url
 			//главное меню

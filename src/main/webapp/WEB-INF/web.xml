@@ -9,8 +9,61 @@
   	<servlet-name>InitServlet</servlet-name>
   	<servlet-class>nick.pack.servlets.InitServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>SignIn</servlet-name>
+  	<jsp-file>/authorize.jsp</jsp-file>
+  </servlet>
+  <servlet>
+  	<servlet-name>Authorize</servlet-name>
+  	<servlet-class>nick.pack.servlets.AuthorizeServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Main</servlet-name>
+  	<jsp-file>/main.jsp</jsp-file>
+  </servlet>
+  <servlet>
+  	<servlet-name>Error</servlet-name>
+  	<jsp-file>/errAuthorize.jsp</jsp-file>
+  </servlet>
+  <servlet>
+  	<servlet-name>SignUp</servlet-name>
+  	<jsp-file>/registration.jsp</jsp-file>
+  </servlet>
+  <servlet>
+  	<servlet-name>Registration</servlet-name>
+  	<servlet-class>nick.pack.servlets.SignUpController</servlet-class>
+  </servlet>
+  
+  
+  
+  
+  
   <servlet-mapping>
   	<servlet-name>InitServlet</servlet-name>
   	<url-pattern>/init</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SignIn</servlet-name>
+  	<url-pattern>/signin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Authorize</servlet-name>
+  	<url-pattern>/authorize</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Main</servlet-name>
+  	<url-pattern>/main</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Error</servlet-name>
+  	<url-pattern>/err</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SignUp</servlet-name>
+  	<url-pattern>/sign_up</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Registration</servlet-name>
+  	<url-pattern>/registr</url-pattern>
   </servlet-mapping>
 </web-app>

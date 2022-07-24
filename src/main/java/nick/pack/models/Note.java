@@ -16,6 +16,11 @@ public class Note {
 		this.text = text;
 		this.user = user;
 	}
+	public Note(String name, String text, User user) {
+		this.name = name;
+		this.text = text;
+		this.user = user;
+	}
 	public Note() {
 		
 	}

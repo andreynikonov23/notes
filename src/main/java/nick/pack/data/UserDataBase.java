@@ -21,6 +21,10 @@ public class UserDataBase extends Connect implements DAO<User>{
 			String password = entity.getPassword();
 			String sql = String.format("INSERT INTO person (name, login, password) VALUES ('%s', '%s', '%s')", name, login, password);
 			statemant.execute(sql);
+			if (entity.getId() == 0) {
+				int id = EntityList.userList.get(EntityList.userList.size() - 1).getId() + 1;
+				entity.setId(id);
+			}
 			EntityList.userList.add(entity);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

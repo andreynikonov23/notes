@@ -9,17 +9,16 @@ body{
 .wind{
     width: 100%;
     height: 100%;
-    background: linear-gradient(-45deg, #FF35FF, #6A00FF);
+    background: linear-gradient(-45deg, red, blue);
     display: flex;
     justify-content: center;
     justify-items: center;
-}
-.wind{
-    
+    padding-top: 244px;
+    padding-bottom: 244px;
 }
 #cont{
     background-color: white;
-    padding: 50px
+    padding: 50px;
 }
 #heading{
 	font-family: 'Mukta', sans-serif;
@@ -32,7 +31,7 @@ body{
 }
 #inputs input{
 	display: block;
-	width: 100%;
+	width: 95%;
 	height: 35px;
     background-color: #e7e7e7;
     border: solid 1px #A0A0A0;
@@ -45,10 +44,28 @@ body{
 #inputs{
     margin-bottom: 40px;
 }
-button{
+.b{
 	display: block;
     width: 100%;
+    height: 50px;
+    cursor: pointer;
 }
 #sign_in{
     margin-bottom: 20px;
+    background-color: #c34c89;
+    border: #98315d solid 1px;
+    font-size: 22px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#sign_up{
+    background-color: #BEBEBE;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: #595959 solid 1px;
+    margin-bottom: 25px;
+}
+#error{
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
 }

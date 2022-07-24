@@ -18,9 +18,9 @@
 								<input name="password" type="password" placeholder="Пароль" id="password">
 							</div>
 								<input class="b" id="sign_in" type="submit" value="Войти">
-							
 						</form>
-							<button class="b" id="sign_up" onclick="document.location='/notes/sign_up'">Регистрация</button>
+								<button class="b" id="sign_up" onclick="document.location='/notes/sign_up'">Регистрация</button>
+								<label id="error">Неверный логин или пароль</label>
 					</div>
 				</div>
 			</div>
