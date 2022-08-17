@@ -1,8 +1,6 @@
 package nick.pack.data;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,41 +12,50 @@ public class UserDataBase extends Connect implements DAO<User>{
 	private Logger logger = Logger.getLogger(UserDataBase.class);
 	public void insert(User entity) {
 		// TODO Auto-generated method stub
-		try(Statement statemant = conn.createStatement()){
 			logger.debug(UserDataBase.class + " insert value - " + entity);
 			String name = entity.getName();
 			String login = entity.getLogin();
 			String password = entity.getPassword();
-			String sql = String.format("INSERT INTO person (name, login, password) VALUES ('%s', '%s', '%s')", name, login, password);
-			statemant.execute(sql);
+			PreparedStatement statement;
+			try {
+				statement = conn.prepareStatement("INSERT INTO person (name, login, password) VALUES (?, ?, ?)");
+				statement.setString(1, name);
+				statement.setString(2, login);
+				statement.setString(3, password);
+				statement.execute();
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				logger.error(e);
+				e.printStackTrace();
+			}
 			if (entity.getId() == 0) {
 				int id = EntityList.userList.get(EntityList.userList.size() - 1).getId() + 1;
 				entity.setId(id);
 			}
 			EntityList.userList.add(entity);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			logger.error(e);
-			e.printStackTrace();
-		}
 	}
 
 	public void update(User entity) {
 		// TODO Auto-generated method stub
-		try(Statement statement = conn.createStatement()){
+		try{
 			logger.debug(UserDataBase.class + " update value - " + entity);
 			int id = entity.getId();
 			String name = entity.getName();
 			String login = entity.getLogin();
 			String password = entity.getPassword();
-			String sql = String.format("UPDATE person SET name='%s', login='%s', password='%s' WHERE id=%d", name, login, password, id);
 			List<User> users = EntityList.userList;
-			statement.execute(sql);
+			PreparedStatement statement = conn.prepareStatement("UPDATE person SET name='?', login='?', password='?' WHERE id=?");
+			statement.setString(1, name);
+			statement.setString(2, login);
+			statement.setString(3, password);
+			statement.setInt(4, id);
 			for(int i=0; i < users.size(); i++) {
 				if (users.get(i).getId() == entity.getId()) {
 					users.set(i, entity);
 				}
 			}
+			statement.execute();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			logger.error(e);
@@ -58,11 +65,13 @@ public class UserDataBase extends Connect implements DAO<User>{
 
 	public void delete(User entity) {
 		// TODO Auto-generated method stub
-		try(Statement statement = conn.createStatement()){
+		try{
 			logger.debug(UserDataBase.class + " delete value - " + entity);
 			int id = entity.getId();
 			String sql = String.format("DELETE FROM person WHERE id=%d", id);
-			statement.execute(sql);
+			PreparedStatement statement = conn.prepareStatement("DELETE FROM person WHERE id=?");
+			statement.setInt(0, id);
+			statement.execute();
 			EntityList.userList.remove(entity);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
