@@ -1,5 +1,6 @@
 package nick.pack.data;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -18,12 +19,18 @@ public class NoteDataBase extends Connect implements DAO<Note> {
 	@Override
 	public void insert(Note entity) {
 		// TODO Auto-generated method stub
-		try(Statement statement = conn.createStatement()){
+		try{
 			logger.debug(NoteDataBase.class + "insert value - " + entity);
 			String name = entity.getName();
 			String text = entity.getText();
-			String sql = String.format("INSERT INTO note (name, text) VALUES ('%s', '%s')", name, text);
-			statement.execute(sql);
+			PreparedStatement statement = conn.prepareStatement("INSERT INTO note (name, text) VALUES (?, ?)");
+			statement.setString(1, name);
+			statement.setString(2, text);
+			statement.execute();
+			if (entity.getId() == 0) {
+				int id = EntityList.noteList.get(EntityList.noteList.size() - 1).getId() + 1;
+				entity.setId(id);
+			}
 			notes.add(entity);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -35,13 +42,16 @@ public class NoteDataBase extends Connect implements DAO<Note> {
 	@Override
 	public void update(Note entity) {
 		// TODO Auto-generated method stub
-		try(Statement statement = conn.createStatement()){
+		try{
 			logger.debug(NoteDataBase.class + "update value - " + entity);
 			int id = entity.getId();
 			String name = entity.getName();
 			String text = entity.getText();
-			String sql = String.format("UPDATE note SET name='%s', text='%s' WHERE id=%d", name, text, id);
-			statement.execute(sql);
+			PreparedStatement statement = conn.prepareStatement("UPDATE note SET name='?', text='?' WHERE id=?");
+			statement.setString(1, name);
+			statement.setString(2, text);
+			statement.setInt(3, id);
+			statement.execute();
 			for(int i=0; i < notes.size(); i++) {
 				if (notes.get(i).getId() == entity.getId()) {
 					notes.set(i, entity);
@@ -57,11 +67,13 @@ public class NoteDataBase extends Connect implements DAO<Note> {
 	@Override
 	public void delete(Note entity) {
 		// TODO Auto-generated method stub
-		try(Statement statement = conn.createStatement()){
+		try{
 			logger.debug(NoteDataBase.class + " delete value - " + entity);
 			int id = entity.getId();
 			String sql = String.format("DELETE FROM note WHERE id=%d", id);
-			statement.execute(sql);
+			PreparedStatement statement = conn.prepareStatement("DELETE FROM note WHERE id=?");
+			statement.setInt(1, id);
+			statement.execute();
 			notes.remove(entity);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

@@ -1,0 +1,61 @@
+@charset "UTF-8";
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+#container{
+    width: 70%;
+    margin: 0 auto;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    background-color: #6EADFF;
+}
+.fa-user{
+	color: #858585;
+}
+#circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #D0D0D0;
+    outline: 5px #151515 solid;
+    outline-offset: 4px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.user{
+    width: 150px;
+    height: 90px;
+    background-color: #3C63FF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 30px;
+    cursor: pointer;
+}
+#username{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: white;
+}
+.search-block{
+    height: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}

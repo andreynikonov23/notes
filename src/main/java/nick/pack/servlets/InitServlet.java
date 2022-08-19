@@ -29,8 +29,8 @@ public class InitServlet extends HttpServlet {
 			logger.debug(": session not found, redirect in /signin");
 			response.sendRedirect("/notes/signin");
 		} else {
-			//проверка url
-			//главное меню
+			logger.debug(": session found, user - " + user);
+			response.sendRedirect("/notes/main");
 		}
 	}
 	

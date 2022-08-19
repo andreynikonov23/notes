@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
@@ -35,6 +36,8 @@ public class AuthorizeServlet extends HttpServlet {
 				logger.debug(": user " + login + " is authorized");
 				logger.debug(": redirect in /main");
 				try {
+					HttpSession session = request.getSession();
+					session.setAttribute("user", user);
 					response.sendRedirect("/notes/main");
 				} catch (IOException e) {
 					// TODO Auto-generated catch block

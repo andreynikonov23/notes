@@ -33,6 +33,14 @@
   	<servlet-name>Registration</servlet-name>
   	<servlet-class>nick.pack.servlets.SignUpController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>LoginErrorRegist</servlet-name>
+  	<jsp-file>/loginErrorRegistration.jsp</jsp-file>
+  </servlet>
+  <servlet>
+  	<servlet-name>PasswordErrorRegist</servlet-name>
+  	<jsp-file>/passwordErrorRegistration.jsp</jsp-file>
+  </servlet>
   
   
   
@@ -65,5 +73,13 @@
   <servlet-mapping>
   	<servlet-name>Registration</servlet-name>
   	<url-pattern>/registr</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LoginErrorRegist</servlet-name>
+  	<url-pattern>/loginerreg</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>PasswordErrorRegist</servlet-name>
+  	<url-pattern>/passworderregist</url-pattern>
   </servlet-mapping>
 </web-app>
