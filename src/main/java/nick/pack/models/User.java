@@ -1,6 +1,10 @@
 package nick.pack.models;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+
+import nick.pack.data.EntityList;
 
 public class User {
 	private int id;
@@ -77,5 +81,16 @@ public class User {
 	
 	public String toString() {
 		return String.format("User: %d, %s, %s, %s", id, name, login, password);
+	}
+	
+	public List<Note> getNotes(){
+		List<Note> noteList = EntityList.noteList;
+		List<Note> notes = new ArrayList<>();
+		for (Note note : noteList) {
+			if (note.getUser().equals(this)) {
+				notes.add(note);
+			}
+		}
+		return notes;
 	}
 }
