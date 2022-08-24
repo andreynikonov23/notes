@@ -1,111 +1,164 @@
+DEBUGInitServlet:25-: /init - request: class nick.pack.servlets.InitServlet checked session
+DEBUGInitServlet:29-: session not found, redirect in /signin
+DEBUGAuthorizeServlet:27-: /authorize request this is post-method class nick.pack.servlets.AuthorizeServlet
+DEBUGAuthorizeServlet:33-Checked user
 DEBUGConnect:15-Data Base connect...
 DEBUGConnect:19-Data Base is connected
-DEBUGUserDataBase:18-class nick.pack.data.UserDataBase insert value - User: 2, Test, test, 1111
-ERRORUserDataBase:28-org.postgresql.util.PSQLException: ОШИБКА: столбец "test" не существует
-  Позиция: 59
+INFO UserDataBase:87-UserList initialize....
+DEBUGUserDataBase:94-UserList is initialized
+INFO NoteDataBase:94-NoteList initialize....
+DEBUGNoteDataBase:108-NoteList is initialized
+DEBUGAuthorizeServlet:36-: user Andrey is authorized
+DEBUGAuthorizeServlet:37-: redirect in /main
+DEBUGInitServlet:25-: /init - request: class nick.pack.servlets.InitServlet checked session
+DEBUGInitServlet:29-: session not found, redirect in /signin
+DEBUGAuthorizeServlet:27-: /authorize request this is post-method class nick.pack.servlets.AuthorizeServlet
+DEBUGAuthorizeServlet:33-Checked user
 DEBUGConnect:15-Data Base connect...
 DEBUGConnect:19-Data Base is connected
-DEBUGUserDataBase:18-class nick.pack.data.UserDataBase insert value - User: 2, Test, test, 1111
-ERRORUserDataBase:28-org.postgresql.util.PSQLException: ОШИБКА: столбец "test" не существует
-  Позиция: 59
+INFO UserDataBase:87-UserList initialize....
+DEBUGUserDataBase:94-UserList is initialized
+INFO NoteDataBase:94-NoteList initialize....
+DEBUGNoteDataBase:108-NoteList is initialized
+DEBUGAuthorizeServlet:36-: user Andrey is authorized
+DEBUGAuthorizeServlet:37-: redirect in /main
+DEBUGNoteDataBase:23-class nick.pack.data.NoteDataBase insert value - Note: 0, Test
+DEBUGInitServlet:25-: /init - request: class nick.pack.servlets.InitServlet checked session
+DEBUGInitServlet:29-: session not found, redirect in /signin
+DEBUGAuthorizeServlet:27-: /authorize request this is post-method class nick.pack.servlets.AuthorizeServlet
+DEBUGAuthorizeServlet:33-Checked user
 DEBUGConnect:15-Data Base connect...
 DEBUGConnect:19-Data Base is connected
-DEBUGUserDataBase:18-class nick.pack.data.UserDataBase insert value - User: 2, Test, test, 1111
-ERRORUserDataBase:28-org.postgresql.util.PSQLException: ОШИБКА: столбец "test" не существует
-  Позиция: 59
+INFO UserDataBase:87-UserList initialize....
+DEBUGUserDataBase:94-UserList is initialized
+INFO NoteDataBase:94-NoteList initialize....
+DEBUGNoteDataBase:108-NoteList is initialized
+DEBUGAuthorizeServlet:36-: user Andrey is authorized
+DEBUGAuthorizeServlet:37-: redirect in /main
+DEBUGInitServlet:25-: /init - request: class nick.pack.servlets.InitServlet checked session
+DEBUGInitServlet:29-: session not found, redirect in /signin
+DEBUGAuthorizeServlet:27-: /authorize request this is post-method class nick.pack.servlets.AuthorizeServlet
+DEBUGAuthorizeServlet:33-Checked user
 DEBUGConnect:15-Data Base connect...
 DEBUGConnect:19-Data Base is connected
-DEBUGUserDataBase:18-class nick.pack.data.UserDataBase insert value - User: 2, Test, test, 1111
-ERRORUserDataBase:28-org.postgresql.util.PSQLException: ОШИБКА: столбец "test" не существует
-  Позиция: 52
+INFO UserDataBase:87-UserList initialize....
+DEBUGUserDataBase:94-UserList is initialized
+INFO NoteDataBase:94-NoteList initialize....
+DEBUGNoteDataBase:108-NoteList is initialized
+DEBUGAuthorizeServlet:36-: user Andrey is authorized
+DEBUGAuthorizeServlet:37-: redirect in /main
+DEBUGNoteDataBase:48-class nick.pack.data.NoteDataBaseupdate value - Note: 8, Жопа
+ERRORNoteDataBase:64-org.postgresql.util.PSQLException: Индекс колонки вне диапазона: 2. Допустимые значения: 1..1
+DEBUGInitServlet:25-: /init - request: class nick.pack.servlets.InitServlet checked session
+DEBUGInitServlet:29-: session not found, redirect in /signin
+DEBUGAuthorizeServlet:27-: /authorize request this is post-method class nick.pack.servlets.AuthorizeServlet
+DEBUGAuthorizeServlet:33-Checked user
 DEBUGConnect:15-Data Base connect...
 DEBUGConnect:19-Data Base is connected
-DEBUGUserDataBase:18-class nick.pack.data.UserDataBase insert value - User: 2, Test, test, 1111
+INFO UserDataBase:87-UserList initialize....
+DEBUGUserDataBase:94-UserList is initialized
+INFO NoteDataBase:94-NoteList initialize....
+DEBUGNoteDataBase:108-NoteList is initialized
+DEBUGAuthorizeServlet:36-: user Andrey is authorized
+DEBUGAuthorizeServlet:37-: redirect in /main
+DEBUGNoteDataBase:48-class nick.pack.data.NoteDataBaseupdate value - Note: 8, Жопа
+DEBUGInitServlet:25-: /init - request: class nick.pack.servlets.InitServlet checked session
+DEBUGInitServlet:29-: session not found, redirect in /signin
+DEBUGAuthorizeServlet:27-: /authorize request this is post-method class nick.pack.servlets.AuthorizeServlet
+DEBUGAuthorizeServlet:33-Checked user
 DEBUGConnect:15-Data Base connect...
 DEBUGConnect:19-Data Base is connected
-INFO UserDataBase:68-UserList initialize....
-DEBUGUserDataBase:75-UserList is initialized
+INFO UserDataBase:87-UserList initialize....
+DEBUGUserDataBase:94-UserList is initialized
+INFO NoteDataBase:94-NoteList initialize....
+DEBUGNoteDataBase:108-NoteList is initialized
+DEBUGAuthorizeServlet:36-: user Andrey is authorized
+DEBUGAuthorizeServlet:37-: redirect in /main
+DEBUGInitServlet:25-: /init - request: class nick.pack.servlets.InitServlet checked session
+DEBUGInitServlet:29-: session not found, redirect in /signin
+DEBUGAuthorizeServlet:27-: /authorize request this is post-method class nick.pack.servlets.AuthorizeServlet
+DEBUGAuthorizeServlet:33-Checked user
 DEBUGConnect:15-Data Base connect...
 DEBUGConnect:19-Data Base is connected
-DEBUGUserDataBase:18-class nick.pack.data.UserDataBase insert value - User: 5, 123, 222, 1111
+INFO UserDataBase:87-UserList initialize....
+DEBUGUserDataBase:94-UserList is initialized
+INFO NoteDataBase:94-NoteList initialize....
+DEBUGNoteDataBase:108-NoteList is initialized
+DEBUGAuthorizeServlet:36-: user Andrey is authorized
+DEBUGAuthorizeServlet:37-: redirect in /main
+DEBUGInitServlet:25-: /init - request: class nick.pack.servlets.InitServlet checked session
+DEBUGInitServlet:32-: session found, user - User: 1, Андрей, Andrey, 1234
+DEBUGInitServlet:25-: /init - request: class nick.pack.servlets.InitServlet checked session
+DEBUGInitServlet:29-: session not found, redirect in /signin
+DEBUGAuthorizeServlet:27-: /authorize request this is post-method class nick.pack.servlets.AuthorizeServlet
+DEBUGAuthorizeServlet:33-Checked user
 DEBUGConnect:15-Data Base connect...
 DEBUGConnect:19-Data Base is connected
-INFO UserDataBase:68-UserList initialize....
-DEBUGUserDataBase:75-UserList is initialized
+INFO UserDataBase:87-UserList initialize....
+DEBUGUserDataBase:94-UserList is initialized
+INFO NoteDataBase:94-NoteList initialize....
+DEBUGNoteDataBase:108-NoteList is initialized
+DEBUGAuthorizeServlet:36-: user Andrey is authorized
+DEBUGAuthorizeServlet:37-: redirect in /main
+DEBUGInitServlet:25-: /init - request: class nick.pack.servlets.InitServlet checked session
+DEBUGInitServlet:29-: session not found, redirect in /signin
+DEBUGAuthorizeServlet:27-: /authorize request this is post-method class nick.pack.servlets.AuthorizeServlet
+DEBUGAuthorizeServlet:33-Checked user
 DEBUGConnect:15-Data Base connect...
 DEBUGConnect:19-Data Base is connected
-DEBUGUserDataBase:36-class nick.pack.data.UserDataBase update value - User: 2, Max, maxx, 1234
+INFO UserDataBase:87-UserList initialize....
+DEBUGUserDataBase:94-UserList is initialized
+INFO NoteDataBase:93-NoteList initialize....
+DEBUGNoteDataBase:107-NoteList is initialized
+DEBUGAuthorizeServlet:36-: user Andrey is authorized
+DEBUGAuthorizeServlet:37-: redirect in /main
+DEBUGInitServlet:25-: /init - request: class nick.pack.servlets.InitServlet checked session
+DEBUGInitServlet:29-: session not found, redirect in /signin
+DEBUGAuthorizeServlet:27-: /authorize request this is post-method class nick.pack.servlets.AuthorizeServlet
+DEBUGAuthorizeServlet:33-Checked user
 DEBUGConnect:15-Data Base connect...
 DEBUGConnect:19-Data Base is connected
-INFO UserDataBase:68-UserList initialize....
-DEBUGUserDataBase:75-UserList is initialized
+INFO UserDataBase:87-UserList initialize....
+DEBUGUserDataBase:94-UserList is initialized
+INFO NoteDataBase:93-NoteList initialize....
+DEBUGNoteDataBase:107-NoteList is initialized
+DEBUGAuthorizeServlet:36-: user Andrey is authorized
+DEBUGAuthorizeServlet:37-: redirect in /main
+DEBUGNoteDataBase:73-class nick.pack.data.NoteDataBase delete value - Note: 8, Жопа
+DEBUGInitServlet:25-: /init - request: class nick.pack.servlets.InitServlet checked session
+DEBUGInitServlet:29-: session not found, redirect in /signin
+DEBUGAuthorizeServlet:27-: /authorize request this is post-method class nick.pack.servlets.AuthorizeServlet
+DEBUGAuthorizeServlet:33-Checked user
 DEBUGConnect:15-Data Base connect...
 DEBUGConnect:19-Data Base is connected
-DEBUGUserDataBase:36-class nick.pack.data.UserDataBase update value - User: 2, Max, maxx, 1234
-INFO UserDataBase:68-UserList initialize....
-DEBUGUserDataBase:75-UserList is initialized
-DEBUGConnect:15-Data Base connect...
-DEBUGConnect:19-Data Base is connected
-DEBUGUserDataBase:36-class nick.pack.data.UserDataBase update value - User: 3, Max, maxx, 1234
-INFO UserDataBase:68-UserList initialize....
-DEBUGUserDataBase:75-UserList is initialized
-DEBUGConnect:15-Data Base connect...
-DEBUGConnect:19-Data Base is connected
-DEBUGUserDataBase:36-class nick.pack.data.UserDataBase update value - User: 3, sads, asda, asds
-INFO UserDataBase:68-UserList initialize....
-DEBUGUserDataBase:75-UserList is initialized
-DEBUGConnect:15-Data Base connect...
-DEBUGConnect:19-Data Base is connected
-DEBUGUserDataBase:36-class nick.pack.data.UserDataBase update value - User: 3, sads, asda, asds
-INFO UserDataBase:69-UserList initialize....
-DEBUGUserDataBase:76-UserList is initialized
-DEBUGConnect:15-Data Base connect...
-DEBUGConnect:19-Data Base is connected
-DEBUGUserDataBase:36-class nick.pack.data.UserDataBase update value - User: 4, sads, asda, asds
-INFO UserDataBase:75-UserList initialize....
-DEBUGUserDataBase:82-UserList is initialized
-DEBUGConnect:15-Data Base connect...
-DEBUGConnect:19-Data Base is connected
-DEBUGUserDataBase:36-class nick.pack.data.UserDataBase update value - User: 5, sadgagasdg, asgdasdaf, asgasds
-INFO UserDataBase:75-UserList initialize....
-DEBUGUserDataBase:82-UserList is initialized
-DEBUGConnect:15-Data Base connect...
-DEBUGConnect:19-Data Base is connected
-INFO UserDataBase:75-UserList initialize....
-DEBUGUserDataBase:82-UserList is initialized
-DEBUGConnect:15-Data Base connect...
-DEBUGConnect:19-Data Base is connected
-INFO UserDataBase:75-UserList initialize....
-DEBUGUserDataBase:82-UserList is initialized
-DEBUGUserDataBase:59-class nick.pack.data.UserDataBase delete value - User: 5, sadgagasdg, asgdasdaf, asgasds
-DEBUGConnect:15-Data Base connect...
-DEBUGConnect:19-Data Base is connected
-INFO UserDataBase:75-UserList initialize....
-DEBUGUserDataBase:82-UserList is initialized
-DEBUGUserDataBase:59-class nick.pack.data.UserDataBase delete value - User: 4, sads, asda, asds
-DEBUGConnect:15-Data Base connect...
-DEBUGConnect:19-Data Base is connected
-INFO UserDataBase:75-UserList initialize....
-DEBUGUserDataBase:82-UserList is initialized
-DEBUGConnect:15-Data Base connect...
-DEBUGConnect:19-Data Base is connected
-INFO UserDataBase:75-UserList initialize....
-DEBUGUserDataBase:82-UserList is initialized
-DEBUGUserDataBase:59-class nick.pack.data.UserDataBase delete value - User: 3, sads, asda, asds
-DEBUGConnect:15-Data Base connect...
-DEBUGConnect:19-Data Base is connected
-INFO UserDataBase:74-UserList initialize....
-DEBUGUserDataBase:81-UserList is initialized
-INFO NoteDataBase:79-NoteList initialize....
-DEBUGConnect:15-Data Base connect...
-DEBUGConnect:19-Data Base is connected
-INFO UserDataBase:74-UserList initialize....
-DEBUGUserDataBase:81-UserList is initialized
-INFO NoteDataBase:80-NoteList initialize....
-DEBUGNoteDataBase:87-NoteList is initialized
-DEBUGConnect:15-Data Base connect...
-DEBUGConnect:19-Data Base is connected
-INFO UserDataBase:74-UserList initialize....
-DEBUGUserDataBase:81-UserList is initialized
-INFO NoteDataBase:80-NoteList initialize....
-DEBUGNoteDataBase:94-NoteList is initialized
+INFO UserDataBase:87-UserList initialize....
+DEBUGUserDataBase:94-UserList is initialized
+INFO NoteDataBase:93-NoteList initialize....
+DEBUGNoteDataBase:107-NoteList is initialized
+DEBUGAuthorizeServlet:52-: invalid username or password - Max
+DEBUGAuthorizeServlet:27-: /authorize request this is post-method class nick.pack.servlets.AuthorizeServlet
+DEBUGAuthorizeServlet:33-Checked user
+DEBUGAuthorizeServlet:36-: user Haisenberg is authorized
+DEBUGAuthorizeServlet:37-: redirect in /main
+DEBUGAddNoteServlet:35-: /add - request POST-method class nick.pack.servlets.AddNoteServlet --- user: Haisenberg
+DEBUGNoteDataBase:23-class nick.pack.data.NoteDataBase insert value - Note: 0, Убить Гуса
+DEBUGDeleteNoteServlet:25-: /delete - request POST-method class nick.pack.servlets.EditNoteServlet --- user: Haisenberg
+DEBUGNoteDataBase:73-class nick.pack.data.NoteDataBase delete value - Note: 8, Убить Гуса
+DEBUGAddNoteServlet:35-: /add - request POST-method class nick.pack.servlets.AddNoteServlet --- user: Haisenberg
+DEBUGNoteDataBase:23-class nick.pack.data.NoteDataBase insert value - Note: 0, Заработать 737к долларов на продаже мета
+DEBUGEditNoteServlet:42-: /edit - request POST-method class nick.pack.servlets.EditNoteServlet --- user: Haisenberg
+DEBUGNoteDataBase:48-class nick.pack.data.NoteDataBaseupdate value - Note: 8, Построить наркоимперию
+DEBUGAuthorizeServlet:27-: /authorize request this is post-method class nick.pack.servlets.AuthorizeServlet
+DEBUGAuthorizeServlet:33-Checked user
+DEBUGAuthorizeServlet:36-: user Haisenberg is authorized
+DEBUGAuthorizeServlet:37-: redirect in /main
+DEBUGInitServlet:25-: /init - request: class nick.pack.servlets.InitServlet checked session
+DEBUGInitServlet:32-: session found, user - User: 37, Уолтер Уайт, Haisenberg, 1234
+DEBUGAuthorizeServlet:27-: /authorize request this is post-method class nick.pack.servlets.AuthorizeServlet
+DEBUGAuthorizeServlet:33-Checked user
+DEBUGAuthorizeServlet:36-: user Andrey is authorized
+DEBUGAuthorizeServlet:37-: redirect in /main
+DEBUGAuthorizeServlet:27-: /authorize request this is post-method class nick.pack.servlets.AuthorizeServlet
+DEBUGAuthorizeServlet:33-Checked user
+DEBUGAuthorizeServlet:36-: user Haisenberg is authorized
+DEBUGAuthorizeServlet:37-: redirect in /main
