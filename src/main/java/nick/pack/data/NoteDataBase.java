@@ -20,12 +20,14 @@ public class NoteDataBase extends Connect implements DAO<Note> {
 	public void insert(Note entity) {
 		// TODO Auto-generated method stub
 		try{
-			logger.debug(NoteDataBase.class + "insert value - " + entity);
+			logger.debug(NoteDataBase.class + " insert value - " + entity);
 			String name = entity.getName();
 			String text = entity.getText();
-			PreparedStatement statement = conn.prepareStatement("INSERT INTO note (name, text) VALUES (?, ?)");
+			User user = entity.getUser();
+			PreparedStatement statement = conn.prepareStatement("INSERT INTO note (name, text, person_id) VALUES (?, ?, ?)");
 			statement.setString(1, name);
 			statement.setString(2, text);
+			statement.setInt(3, user.getId());
 			statement.execute();
 			if (entity.getId() == 0) {
 				int id = EntityList.noteList.get(EntityList.noteList.size() - 1).getId() + 1;
@@ -47,7 +49,7 @@ public class NoteDataBase extends Connect implements DAO<Note> {
 			int id = entity.getId();
 			String name = entity.getName();
 			String text = entity.getText();
-			PreparedStatement statement = conn.prepareStatement("UPDATE note SET name='?', text='?' WHERE id=?");
+			PreparedStatement statement = conn.prepareStatement("UPDATE note SET name=?, text=? WHERE id=?");
 			statement.setString(1, name);
 			statement.setString(2, text);
 			statement.setInt(3, id);
@@ -70,7 +72,6 @@ public class NoteDataBase extends Connect implements DAO<Note> {
 		try{
 			logger.debug(NoteDataBase.class + " delete value - " + entity);
 			int id = entity.getId();
-			String sql = String.format("DELETE FROM note WHERE id=%d", id);
 			PreparedStatement statement = conn.prepareStatement("DELETE FROM note WHERE id=?");
 			statement.setInt(1, id);
 			statement.execute();

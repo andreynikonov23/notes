@@ -41,6 +41,18 @@
   	<servlet-name>PasswordErrorRegist</servlet-name>
   	<jsp-file>/passwordErrorRegistration.jsp</jsp-file>
   </servlet>
+  <servlet>
+  	<servlet-name>AddNoteServlet</servlet-name>
+  	<servlet-class>nick.pack.servlets.AddNoteServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>EditNoteServlet</servlet-name>
+  	<servlet-class>nick.pack.servlets.EditNoteServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteNoteServlet</servlet-name>
+  	<servlet-class>nick.pack.servlets.DeleteNoteServlet</servlet-class>
+  </servlet>
   
   
   
@@ -81,5 +93,17 @@
   <servlet-mapping>
   	<servlet-name>PasswordErrorRegist</servlet-name>
   	<url-pattern>/passworderregist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddNoteServlet</servlet-name>
+  	<url-pattern>/add</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EditNoteServlet</servlet-name>
+  	<url-pattern>/edit</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteNoteServlet</servlet-name>
+  	<url-pattern>/delete</url-pattern>
   </servlet-mapping>
 </web-app>

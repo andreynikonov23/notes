@@ -141,7 +141,7 @@ aside{
     box-shadow: 0 5px 5px 1px black;
     padding: 100px;
 }
-.add-note{
+#add-note{
     display: flex;
     background-color: #FF4141;
     width: 60px;
@@ -184,7 +184,9 @@ aside{
     font-family: 'DynaPuff', cursive;
     font-size: 24px;
     width: 75%;
-    
+}
+.id{
+    display: none;
 }
 .update-delete{
     width: 10%;
@@ -210,7 +212,7 @@ aside{
     overflow: hidden;
     font-family: 'Shadows Into Light', cursive;
 }
-.add-popup{
+#add-popup{
     position: fixed;
     width: 100%;
     height: 100%;
@@ -220,16 +222,17 @@ aside{
     justify-items: center;
     align-items: center;
     align-content: center;
+    display: none;
 }
-.add-popup-content{
+.popup-content{
     width: 40%;
-    height: 40%;
+    height: 42%;
     background-color: white;
 }
 .popup-container{
     padding: 25px;
 }
-.popup-container input{
+.name-field{
     display: block;
     width: 70%;
     margin-bottom: 30px;
@@ -242,8 +245,77 @@ textarea{
     height: 230px;
     margin-bottom: 20px;
 }
-.button-block{
-    width: 100%;
+.button{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 25px;
+}
+.popup-btn{
+	width: 80px;
+    border-radius: 8px;
+    border: 0;
+    background-color: #6EADFF;
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+.popup-btn:hover{
+    background-color: #0974FF;
+}
+.cencel{
+    display: flex;
+    justify-content: flex-end;
+    justify-items: flex-end;
+    color: red;
+    cursor: pointer;
+}
+#edit-popup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    display: none;
+}
+#identify{
+    overflow: hidden;
+    display: none;
+}
+#delete-popup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    display: none;
+}
+.question{
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.id-note{
+    display: none;
+}
+#delete-popup form{
+    width: fit-content;
+    display: inline-block;
+    margin-left: 95px;
+}
+.delete-popup-content{
+    width: 400px;
+    height: 150px;
+    background-color: white;
 }

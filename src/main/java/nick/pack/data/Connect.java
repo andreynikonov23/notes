@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import org.apache.log4j.Logger;
 import org.postgresql.Driver;
 
-public class Connect {
+public abstract class Connect {
 	protected static Connection conn;
 	private static Logger logger = Logger.getLogger(Connect.class);
 	static {

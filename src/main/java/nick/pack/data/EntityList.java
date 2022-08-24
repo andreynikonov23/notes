@@ -18,4 +18,25 @@ public class EntityList {
 		DAO<Note> noteDAO = new NoteDataBase();
 		EntityList.noteList.addAll(noteDAO.selectAll());
 	}
+	
+	public static Note binarySearchNoteList(int id) {
+		int low = 0;
+		int high = noteList.size() - 1;
+		
+		while(low <= high) {
+			int mid = (low + high)/2;
+			Note guess = noteList.get(mid);
+			
+			if (guess.getId() == id) {
+				return guess;
+			}
+			if (guess.getId() > id) {
+				high = mid - 1;
+			}
+			if (guess.getId() < id) {
+				low = mid + 1;
+			}
+		}
+		return null;
+	}
 }
