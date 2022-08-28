@@ -24,6 +24,7 @@ public class SearchServlet  extends HttpServlet{
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		HttpSession session = request.getSession();
 		User user = (User) session.getAttribute("user");
+		logger.debug(": User is " + user.getLogin() + " search note");
 		
 		String isoSearch = request.getParameter("search");
 		
@@ -46,9 +47,11 @@ public class SearchServlet  extends HttpServlet{
 	}
 	
 	public static List<Note> getResult(){
+		logger.debug("return static List notes for " + SearchServlet.class);
 		return result;
 	}
 	public static String getSearchInfo() {
+		logger.debug("return search info for " + SearchServlet.class);
 		return search;
 	}
 	
