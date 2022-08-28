@@ -1,3 +1,4 @@
+<%@ page import="nick.pack.servlets.SearchServlet" %>
 <%@page import="nick.pack.data.EntityList"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
@@ -63,9 +64,8 @@
         <nav>
             <div class="search-block">
                 <form method="post" action="/notes/search">
-                    <input name="search" id="search-field" type="search" placeholder="Поиск">
+                    <input name="search" id="search-field" type="search" placeholder="Поиск" value="<%=SearchServlet.getSearchInfo() %>">
                     <input id="search-button" type="submit" value="Найти">
-                    
                 </form>
             </div>
             <div class="user">
@@ -89,14 +89,15 @@
                 </div>
             </div>
         </nav>
-        <aside>
+        <aside class="search-result">
+        <a href="/notes/main" class="back">Назад</a>
            <button id="add-note" onclick="openAddPopup()">
            		<div id="plus">+</div>
            </button>
            <%
-           		List<Note> noteList = user.getNotes();
-           		for(Note note : noteList){
-                    int id = note.getId();
+           		List<Note> result = SearchServlet.getResult();
+           		for (Note note : result){
+           			int id = note.getId();
            			String name = note.getName();
            			String text = note.getText();
            %>
@@ -124,3 +125,4 @@
     </div>
 </body>
 </html>
+<% SearchServlet.getResult().clear(); %>

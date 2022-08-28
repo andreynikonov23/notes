@@ -53,6 +53,14 @@
   	<servlet-name>DeleteNoteServlet</servlet-name>
   	<servlet-class>nick.pack.servlets.DeleteNoteServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>SearchServlet</servlet-name>
+  	<servlet-class>nick.pack.servlets.SearchServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ResultSearch</servlet-name>
+  	<jsp-file>/searchResult.jsp</jsp-file>
+  </servlet>
   
   
   
@@ -106,4 +114,13 @@
   	<servlet-name>DeleteNoteServlet</servlet-name>
   	<url-pattern>/delete</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SearchServlet</servlet-name>
+  	<url-pattern>/search</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ResultSearch</servlet-name>
+  	<url-pattern>/result</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
