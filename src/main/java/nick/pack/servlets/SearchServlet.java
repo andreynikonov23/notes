@@ -51,4 +51,5 @@ public class SearchServlet  extends HttpServlet{
 	public static String getSearchInfo() {
 		return search;
 	}
+	
 }
